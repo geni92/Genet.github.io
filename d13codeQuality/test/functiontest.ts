@@ -33,3 +33,42 @@ describe("test of downpayment",function(){
 
 
 })
+
+
+
+import {double} from "../src/app.js"
+describe("double ",function(){
+    it("test double 2" ,function(){
+        assert.strictEqual(double(2)*2,4)
+    });
+});
+import{times}from "../src/app.js"
+ describe("times",function(){
+    it("tests times 100",function(){
+        assert.strictEqual(times(10)*100,1000)
+    });
+    it("tests times 100",function(){
+        assert.strictEqual(times(14)*100,1400)
+    });
+ });
+ import{myMap}from "../src/app.js"
+
+ describe('myMap function', () => {
+    it('should triple the values using anonymous function expression', () => {
+        let numbers: number[] = [1, 2, 3, 4, 5];
+
+        let tripledNumbers = myMap(numbers, function(item) {
+            return item * 3;
+        });
+
+        assert.deepEqual(tripledNumbers, [3, 6, 9, 12, 15]);
+    });
+
+    it('should triple the values using arrow function expression', () => {
+        let numbers: number[] = [1, 2, 3, 4, 5];
+
+        let tripledNumbers = myMap(numbers, item => item * 3);
+
+        assert.deepEqual(tripledNumbers, [3, 6, 9, 12, 15]);
+    });
+});

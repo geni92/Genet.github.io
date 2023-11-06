@@ -38,3 +38,22 @@ console.log("expect 2000: ", calcDownpayment(40000));
 console.log("expect 2500: ", calcDownpayment(50000));
 console.log("expect 7500: ", calcDownpayment(100000)); 
 console.log("expect 25000: ", calcDownpayment(250000));
+
+
+export function double(num:number):number{
+  return 2 * num; 
+}
+//Write a function times100 that takes a number and returns 100 times the number.
+
+export function times(num:number):number{
+  return 100*num;
+}
+
+export function myMap(array:number[],callback:(item:number)=>number):number[]{
+  let arr:number[]=[];
+  for (let i=0;i<array.length;i++){
+      arr.push(callback(arr[i]));
+  }
+  return arr;
+}
+  
